@@ -35,16 +35,22 @@ public class LetterCombinationUtilsTest {
     }
 
     /**
-     * 是否是2-9的数字测试
+     * 判断是2-9的数字测试
      */
     @Test
     void checkContainLetterTest() {
-
-        boolean result = LetterCombinationUtils.checkContainLetter(0);
-        Assert.assertTrue(!result);
-
         boolean result2 = LetterCombinationUtils.checkContainLetter(2);
         Assert.assertTrue(result2);
 
+    }
+
+    /**
+     * 判断非2-9的数字测试
+     */
+    @Test
+    void checkContainLetterTest2() {
+
+        boolean result = LetterCombinationUtils.checkContainLetter(0);
+        Assert.assertTrue(!result);
     }
 }

@@ -9,7 +9,7 @@ import java.util.List;
 public class LetterCombinationServiceTest {
 
     /**
-     * 逻辑计算：携带非2-9
+     * 逻辑计算：携带包含非2-9的值
      */
     @Test
     void calculateTest() {

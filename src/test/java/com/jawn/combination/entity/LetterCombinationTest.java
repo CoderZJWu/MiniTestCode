@@ -18,6 +18,21 @@ public class LetterCombinationTest {
 
         String[] arr = letterCombination.getParams();
         Assert.assertTrue("a".equals(arr[0]));
+
+        for (String str : arr) {
+            Assert.assertTrue(!"d".equals(str));
+        }
+    }
+
+    /**
+     * 实体值测试:值为非2-9的数字时
+     */
+    @Test
+    void valueTest2() {
+        LetterCombination letterCombination = new LetterCombination(0);
+        String[] arr = letterCombination.getParams();
+        Assert.assertTrue(arr == null);
+
     }
 
     /**
@@ -27,7 +42,13 @@ public class LetterCombinationTest {
     void checkDigitTest() {
         LetterCombination letterCombination = new LetterCombination(3);
         Assert.assertTrue(letterCombination.getContainLetter() == true);
+    }
 
+    /**
+     * 校验是否包含映射value:值为非2-9的数字
+     */
+    @Test
+    void checkDigitTest2() {
         LetterCombination letterCombination2 = new LetterCombination(0);
         Assert.assertTrue(letterCombination2.getContainLetter() == false);
     }
